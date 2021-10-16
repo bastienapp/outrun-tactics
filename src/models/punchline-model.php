@@ -20,6 +20,7 @@ function getRandomPunchlineByOpponentId(int $id)
     $statement->bindValue(':id', $id, PDO::PARAM_INT);
     $statement->execute();
     $questions = $statement->fetchAll(PDO::FETCH_OBJ);
-    return array_rand($questions);
+    $indexRandom = array_rand($questions);
+    return $questions[$indexRandom];
 
 }
