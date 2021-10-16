@@ -1,0 +1,49 @@
+main{
+    margin: auto;
+}
+
+.section--ranking{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    height: 5vw;
+}
+
+.section__div--ranking{
+        width: 12%;
+        text-align: center;
+        border-left: 1px solid black;
+        font-size: 2em;
+        
+}
+
+.section__form--quoteAndAnswer{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 20vw;
+}
+
+.section__form__label--quoteAndAnswer{
+    width: 40%;
+    background-color: rgb(141, 210, 241);
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35%;
+    border-radius: 25%;
+
+}
+
+.section__form__label--quoteAndAnswer input{
+    display: none;
+}
+
+.section__form__label--submit{
+    width: 25%;
+    font-size: 2em;
+}
