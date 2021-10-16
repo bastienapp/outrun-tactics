@@ -1,3 +1,11 @@
+<?php 
+require_once __DIR__ . '/../models/opponent-model.php';
+require_once __DIR__ . '/../models/punchline-model.php';
+$sentencesOfAnOpponent = getPunchlineByOpponentId($_GET['opponent']);
+$opponents = getAllOpponent();
+
+?>
+
 <link rel="stylesheet" href="styles/turn-view.css">
 <main>
 
