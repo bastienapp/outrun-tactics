@@ -27,7 +27,6 @@ function getOpponentsByPosition(string $position): array
 {
     //Bastien si tu vois ça, je suis désolé, y'avait bien plus simple mais on s'est perdu en cours de route et il était tard
     $arrayToSplice = str_split($position);
-    var_dump($arrayToSplice);
     $opponentInRightPosition = [];
     $player = [
         'id' => "8",

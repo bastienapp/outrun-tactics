@@ -8,8 +8,6 @@ $playerPos = strpos($ranking, "8");
 $opponentPos = $playerPos - 1;
 $sentencesOfAnOpponent = getRandomPunchlineByOpponentId($ranking[$opponentPos]);
 $lapRanking = getOpponentsByPosition($ranking);
-var_dump($lapRanking);
-// die();
 ?>
 
 <link rel="stylesheet" href="styles/turn-view.css">
