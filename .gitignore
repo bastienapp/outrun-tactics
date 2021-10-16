@@ -1,5 +1,9 @@
-env.php.dist
+env.php
 .vscode
 vendor
 .idea/
+
 env_moi.php
+
+/public/test.php
+
