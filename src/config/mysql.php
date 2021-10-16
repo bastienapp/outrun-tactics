@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../../env.php';
+require_once __DIR__ . '/../../env_moi.php';
 
 function getConnection(): PDO
 {
