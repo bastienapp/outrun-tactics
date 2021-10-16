@@ -38,14 +38,20 @@ function getOpponentsByPosition(string $position): array
         $statement->execute();
         $opponentInRightPosition[] = $statement->fetch();
     }
-    $newArray = array_chunk($opponentInRightPosition, $indexOfPlayer + 1, true);
+    $newArray = array_chunk($opponentInRightPosition, $indexOfPlayer, true);
+    var_dump($newArray);
+    die();
     $player = [
         'id' => "8",
         'name' => "Player",
     ];
     array_push($newArray[0], $player);
-    foreach ($newArray[1] as $newArrayOsef)
-        array_push($newArray[0], $newArrayOsef);
+    foreach ($newArray[1] as $value) {
+        $newArray[0][]= $value;
+    }
+  
+    
+
     return $newArray[0];
 }
 

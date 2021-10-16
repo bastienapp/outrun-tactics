@@ -7,6 +7,9 @@ $arrayRankings = str_split($ranking);
 $playerPos = strpos($ranking, "8");
 $opponentPos = $playerPos - 1;
 $sentencesOfAnOpponent = getRandomPunchlineByOpponentId($ranking[$opponentPos]);
+$lapRanking = getOpponentsByPosition($ranking);
+var_dump($lapRanking);
+// die();
 ?>
 
 <link rel="stylesheet" href="styles/turn-view.css">
@@ -15,8 +18,8 @@ $sentencesOfAnOpponent = getRandomPunchlineByOpponentId($ranking[$opponentPos]);
 
 <h2>Classement actuel :</h2>
 <section class="section--ranking">
-    <?php foreach ($arrayRankings as $rank) : ?>
-    <div class="section__div--ranking"><?= $opponents[$rank-1]->name ?></div>
+    <?php foreach ($lapRanking as $rank) : ?>
+    <div class="section__div--ranking"><?= $rank['name'] ?></div>
     <?php endforeach; ?>
 </section>
 <hr>
