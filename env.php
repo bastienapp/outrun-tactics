@@ -4,5 +4,5 @@
 
 const DB_HOST = 'localhost';
 const DB_NAME = 'outrun_tactics';
-const DB_USER = 'user';
-const DB_PASSWORD = 'pwd';
+const DB_USER = 'Asa';
+const DB_PASSWORD = 'necrlB6i2_#4LSPaJlcu';
