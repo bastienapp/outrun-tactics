@@ -7,7 +7,6 @@ $arrayRankings = str_split($ranking);
 $playerPos = strpos($ranking, "8");
 $opponentPos = $playerPos - 1;
 $sentencesOfAnOpponent = getRandomPunchlineByOpponentId($ranking[$opponentPos]);
-var_dump($sentencesOfAnOpponent);
 ?>
 
 <link rel="stylesheet" href="styles/turn-view.css">
