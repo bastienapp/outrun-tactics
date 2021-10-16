@@ -3,11 +3,13 @@ require_once __DIR__ . '/../models/opponent-model.php';
 require_once __DIR__ . '/../models/punchline-model.php';
 $opponents = getAllOpponent();
 $ranking = $_GET['position'];
-var_dump($ranking);
+$arrayRankings = str_split($ranking);
 $playerPos = strpos($ranking, "8");
 $opponentPos = $playerPos - 1;
-$sentencesOfAnOpponent = getRandomPunchlineByOpponentId($opponentPos);
-
+$sentencesOfAnOpponent = getRandomPunchlineByOpponentId($ranking[$opponentPos]);
+$lapRanking = getOpponentsByPosition($ranking);
+var_dump($lapRanking);
+// die();
 ?>
 
 <link rel="stylesheet" href="styles/turn-view.css">
@@ -16,8 +18,8 @@ $sentencesOfAnOpponent = getRandomPunchlineByOpponentId($opponentPos);
 
 <h2>Classement actuel :</h2>
 <section class="section--ranking">
-    <?php foreach ($opponents as $opponent) : ?>
-    <div class="section__div--ranking"><?= $opponent->name ?></div>
+    <?php foreach ($lapRanking as $rank) : ?>
+    <div class="section__div--ranking"><?= $rank['name'] ?></div>
     <?php endforeach; ?>
 </section>
 <hr>
