@@ -12,6 +12,8 @@
 require_once __DIR__ . '/../src/controllers/turn-controller.php';
 
 // TODO routing
+
 ?>
 </body>
 </html>
+<?php require_once __DIR__ . "/../src/routing.php"; ?>
