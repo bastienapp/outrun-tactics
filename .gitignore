@@ -3,7 +3,5 @@ env.php
 vendor
 .idea/
 
-env_moi.php
-
 /public/test.php
 
