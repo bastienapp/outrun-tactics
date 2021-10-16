@@ -42,7 +42,7 @@ $opponents = getAllOpponent();
         </div>
     </section>
     <div class="start">
-        <a class= bouton href="/turn?lap=0&position=12345678">Start!</a> 
+        <a class="bouton" href="/turn?lap=0&position=12345678">Start!</a> 
     </div>
     <?php require_once(__DIR__ . '/../src/views/_footer.php') ?>
 </body>
