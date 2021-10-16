@@ -1,0 +1,59 @@
+body {
+    overflow-x: hidden;
+}
+
+.result-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+.container-podium {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.first-bloc {
+    height: 11rem;
+    width: 15rem;
+    background-color: lightgrey;
+    border-top-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    opacity: 0.6;
+}
+
+.second-bloc {
+    height: 15rem;
+    width: 15rem;
+    background-color: lightgrey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    opacity: 0.7;
+}
+
+.third-bloc {
+    height: 7rem;
+    width: 15rem;;
+    background-color: lightgrey;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    opacity: 0.5;
+}
