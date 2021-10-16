@@ -12,8 +12,8 @@
    <h1>Titre du jeu</h1>
 
    <H2>Liste des adversaires :</H2>
-   <?php foreach ($opponents as $opponent): ?>
     <section class="opponents">
+    <?php foreach ($opponents as $opponent): ?> 
     <ul class="opponents__ul">
         <li class="opponents__li">
             <div class="opponents__li--card">
@@ -23,9 +23,7 @@
             </div>
         </li>
     </ul>
-    </section>
     <?php endforeach ?>
-
     <div class="start-button">
         <input type="submit" value="Start!">
     </div>
