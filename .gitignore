@@ -2,3 +2,4 @@ env.php.dist
 .vscode
 vendor
 .idea/
+env_moi.php
