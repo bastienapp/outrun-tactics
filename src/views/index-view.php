@@ -20,19 +20,22 @@ $opponents = getAllOpponent();
 
 
     <H1>Préparez vous pour le départ!!</H1>
-    <!-- <div class="joueur__card">
+    <div class="joueur__card">
         <h3> Choix du personnage </h3>
-        <a href="../src/views/turn.php"> <img class="joueur__img" title="Si on me double, je m'énerve! Si je perd, je m'énerve! Donc laissez moi passer!!" src="./images/joueur/1.jpeg" /> </a>
-        <a href="../src/views/turn.php"> <img class="joueur__img" title="Ne tenez pas de me passer devant, sous peine de vous prendre un coup de sabre..." src="./images/joueur/5.jpeg" /> </a>
-        <a href="../src/views/turn.php"> <img class="joueur__img" title="Regardez mes muscles, vous n'avez aucunes chances contre moi" src="./images/joueur/2.jpeg" /> </a>
-        <a href="../src/views/turn.php"> <img class="joueur__img" title="Yo! Prêt pour la bataille?" src="./images/joueur/3.jpeg" /> </a>
-        <a href="../src/views/turn.php"> <img class="joueur__img" title="Je vais vous tuer du regard si vous ne me laissez pas gagner!" src="./images/joueur/4.jpeg" /> </a>
-        <a href="../src/views/turn.php"> <img class="joueur__img" title="Tranquille!! Je prend une petite pause avant de vous mettre une raclée" src="./images/joueur/6.jpeg" /> </a>
-    </div> -->
+        <a href="/turn?lap=0&position=12345678"> <img class="joueur__img" title="Si on me double, je m'énerve! Si je perd, je m'énerve! Donc laissez moi passer!!" src="./images/joueur/1.jpeg" /> </a>
+        <a href="/turn?lap=0&position=12345678"> <img class="joueur__img" title="Ne tenez pas de me passer devant, sous peine de vous prendre un coup de sabre..." src="./images/joueur/5.jpeg" /> </a>
+        <a href="/turn?lap=0&position=12345678"> <img class="joueur__img" title="Regardez mes muscles, vous n'avez aucunes chances contre moi" src="./images/joueur/2.jpeg" /> </a>
+    </div>
+    <div class="joueur__card2">
+        <h3> Choix du personnage </h3>
+        <a href="/turn?lap=0&position=12345678"> <img class="joueur__img" title="Yo! Prêt pour la bataille?" src="./images/joueur/3.jpeg" /> </a>
+        <a href="/turn?lap=0&position=12345678"> <img class="joueur__img" title="Je vais vous tuer du regard si vous ne me laissez pas gagner!" src="./images/joueur/4.jpeg" /> </a>
+        <a href="/turn?lap=0&position=12345678"> <img class="joueur__img" title="Tranquille!! Je prend une petite pause avant de vous mettre une raclée" src="./images/joueur/6.jpeg" /> </a>
+    </div>
     <img class="map" width=50% src="images/map.png">
+    <H1 class = "opponents__title">Concurents :</H1>
     <section>
         <div class="opponents">
-        <H1 class = "opponents__title">Concurents :</H1>
             <?php foreach ($opponents as $opponent) : ?>
                 <div class="opponents__card">
                     <h3><?= $opponent->name ?></h3>
