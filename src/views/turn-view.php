@@ -33,7 +33,8 @@ var_dump($arrayIndex);
 <section class="section--quoteAndAnswer">
     <form class="section__form--quoteAndAnswer" action="/traitement" method="GET">
     <?php foreach ($arrayIndex as $index) : ?>
-        <label class="section__form__label--quoteAndAnswer" for="answer<?= $index ?>" ><?= $sentencesOfAnOpponent->answer_  + $index ?>
+        <?php $property = 'answer_' . $index; ?>
+        <label class="section__form__label--quoteAndAnswer" for="answer<?= $index ?>" ><?= $sentencesOfAnOpponent->$property ?>
             <input type="radio" name="answer" id="answer<?= $index ?>" value="answer<?= $index ?>" class="section__div--quotesAndAnswers" />
         </label>
         <?php endforeach ?>
