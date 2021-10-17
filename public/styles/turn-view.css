@@ -1,8 +1,9 @@
 html {
-  font-family: Raleway;
-  font-size: 16px;
-  background-color: black;
-  color: white;
+     font-family: Raleway;
+     font-size: 16px;
+     background-color: black;
+     color: white;
+     overflow: hidden;
 }
 
 body,
@@ -12,27 +13,108 @@ h3,
 ul,
 li,
 p {
-  margin: 0;
-  padding: 0;
+     margin: 0;
+     padding: 0;
 }
 li {
-  list-style-type: none;
+     list-style-type: none;
+}
+
+main {
+     /* height: 100vh; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+}
+
+img {
+     border: 2px solid white;
+}
+.section--ranking > h2 {
+     text-align: center;
+     padding: 3rem;
 }
 
 .section--ranking ul {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+     display: flex;
+     gap: 0.5rem;
+     justify-content: space-around;
 }
 .section--ranking ul li {
-  display: flex;
-  flex-direction: column;
+     display: flex;
+     flex-direction: column;
 }
 .section--ranking ul li p {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 2px 4px;
+     position: absolute;
+     background-color: rgba(0, 0, 0, 0.8);
+     padding: 2px 4px;
 }
 .section--ranking ul img {
-  width: 100px;
+     width: 10rem;
 }
+
+.section--quote {
+     height: 30%;
+     width: auto;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+}
+.section--quote > img {
+     margin-top: 2rem;
+     width: 20rem;
+}
+
+.section__p--quote {
+     font-size: 3rem;
+     text-align: center;
+     padding: 2rem;
+}
+
+.section--quoteAndAnswer {
+     width: 80%;
+     height: 50vw;
+}
+
+.section__form--quoteAndAnswer {
+     display: flex;
+     flex-wrap: wrap;
+
+     justify-content: space-evenly;
+     width: 100%;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 2rem;
+}
+
+.section__form__label--quoteAndAnswer {
+     width: 43%;
+     font-size: 2rem;
+     padding: 2.5%;
+
+     color: black;
+     background-color: white;
+     border-radius: 10px;
+     text-align: center;
+     /* font-size: 1.5rem; */
+}
+
+.section__form__label--submit {
+     text-decoration: none;
+     color: black;
+     padding: 1rem;
+     background-color: white;
+     border-radius: 10px;
+     text-align: center;
+     font-size: 1.5rem;
+     width: 30vw;
+}
+
+/* .section__form__label--quoteAndAnswer input {
+     display: none;
+} */
