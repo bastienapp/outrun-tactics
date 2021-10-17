@@ -24,7 +24,6 @@ if ($answer === 'answer1') {
           header("Location: /turn?lap=" . $lap . "&position=" . $position);
           die();
      }
-     die();
 } elseif ($answer != 'answer1') {
      if ($lap >= $finalLap) {
           header("Location: /result?lap=" . $lap . "&position=" . $position);

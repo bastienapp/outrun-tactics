@@ -37,7 +37,7 @@ $randomIndex = shuffle($arrayIndex);
                     </label>
                <?php endforeach ?>
                <input type="hidden" value="<?= $ranking ?>" name="position" />
-               <input type="hidden" value="<? $lap ?>" name="lap" />
+               <input type="hidden" value="<?= $lap ?>" name="lap" />
                <input class="section__form__label--submit" type="submit" value="Valider">
           </form>
      </section>
