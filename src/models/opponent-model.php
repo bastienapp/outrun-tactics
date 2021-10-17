@@ -34,15 +34,11 @@ function getOpponentsByPosition(string $position): array
     ];
     $connection = getConnection();
     for ($i = 0; $i < count($arrayToSplice); $i++) {
-        if (!($arrayToSplice[$i] === "8")) {
-            $query = 'SELECT * FROM opponent WHERE id=:id';
-            $statement = $connection->prepare($query);
-            $statement->bindValue(':id', intval($arrayToSplice[$i]), PDO::PARAM_INT);
-            $statement->execute();
-            $opponentInRightPosition[] = $statement->fetch();
-        } else {
-            $opponentInRightPosition[] = $player;
-        }
+        $query = 'SELECT * FROM opponent WHERE id=:id';
+        $statement = $connection->prepare($query);
+        $statement->bindValue(':id', intval($arrayToSplice[$i]), PDO::PARAM_INT);
+        $statement->execute();
+        $opponentInRightPosition[] = $statement->fetch();
     }
     return $opponentInRightPosition;
 }

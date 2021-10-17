@@ -1,49 +1,38 @@
-main{
-    margin: auto;
+html {
+  font-family: Raleway;
+  font-size: 16px;
+  background-color: black;
+  color: white;
 }
 
-.section--ranking{
-    width: 100%;
-    border: 1px solid black;
-    display: flex;
-    justify-content: space-around;
-    height: 5vw;
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
 }
 
-.section__div--ranking{
-        width: 12%;
-        text-align: center;
-        border-left: 1px solid black;
-        font-size: 2em;
-        
+.section--ranking ul {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
 }
-
-.section__form--quoteAndAnswer{
-    display: flex;
-    justify-content: space-around;
-    align-content: space-around;
-    flex-wrap: wrap;
-    width: 80%;
-    height: 20vw;
+.section--ranking ul li {
+  display: flex;
+  flex-direction: column;
 }
-
-.section__form__label--quoteAndAnswer{
-    width: 40%;
-    background-color: rgb(141, 210, 241);
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35%;
-    border-radius: 25%;
-
+.section--ranking ul li p {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2px 4px;
 }
-
-.section__form__label--quoteAndAnswer input{
-    display: none;
-}
-
-.section__form__label--submit{
-    width: 25%;
-    font-size: 2em;
+.section--ranking ul img {
+  width: 100px;
 }

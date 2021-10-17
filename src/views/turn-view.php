@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Outrun Tactics</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="styles/result.css">
+</head>
+<body>
 <?php
 require_once __DIR__ . '/../models/opponent-model.php';
 require_once __DIR__ . '/../models/punchline-model.php';
@@ -19,9 +30,15 @@ $randomIndex = shuffle($arrayIndex);
 
      <h2>Classement actuel :</h2>
      <section class="section--ranking">
-          <?php foreach ($lapRanking as $rank) : ?>
-               <div class="section__div--ranking"><?= $rank['name'] ?></div>
-          <?php endforeach; ?>
+          <ul>
+               <?php $i = 0; ?>
+               <?php foreach ($lapRanking as $rank) : ?>
+               <li class="section__div--ranking">
+                    <img src="<?= $rank['picture'] ?>" />
+                    <p><?= ++$i; ?></p>
+               </li>
+               <?php endforeach; ?>
+          </ul>
      </section>
      <hr>
 
@@ -43,3 +60,5 @@ $randomIndex = shuffle($arrayIndex);
      </section>
 
 </main>
+</body>
+</html>
