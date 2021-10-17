@@ -1,6 +1,7 @@
 <?php 
 require_once __DIR__ . '/../models/opponent-model.php';
 require_once __DIR__ . '/../models/punchline-model.php';
+$lap = intval($_GET['lap']) + 1;
 $opponents = getAllOpponent();
 $ranking = $_GET['position'];
 $arrayRankings = str_split($ranking);
@@ -8,6 +9,9 @@ $playerPos = strpos($ranking, "8");
 $opponentPos = $playerPos - 1;
 $sentencesOfAnOpponent = getRandomPunchlineByOpponentId($ranking[$opponentPos]);
 $lapRanking = getOpponentsByPosition($ranking);
+$arrayIndex = [1,2,3,4]; 
+$randomIndex = shuffle($arrayIndex);
+var_dump($arrayIndex);
 ?>
 
 <link rel="stylesheet" href="styles/turn-view.css">
@@ -25,21 +29,16 @@ $lapRanking = getOpponentsByPosition($ranking);
 <section class="section--quote">
     <p class="section__p--quote"><?= $sentencesOfAnOpponent->sentence ?></p>
 </section>
-
+<?php var_dump($sentencesOfAnOpponent) ?>
 <section class="section--quoteAndAnswer">
-    <form class="section__form--quoteAndAnswer" action="/traitement?lap=<?= $lap ?>&position=<?= $ranking ?>&answer= <?= $_GET['answer'] ?>" method="GET">
-        <label class="section__form__label--quoteAndAnswer" for="answer1"><?= $sentencesOfAnOpponent->answer_1 ?>
-            <input type="radio" name="answer" id="answer1" value="answer1" class="section__div--quotesAndAnswers" />
+    <form class="section__form--quoteAndAnswer" action="/traitement" method="GET">
+    <?php foreach ($arrayIndex as $index) : ?>
+        <label class="section__form__label--quoteAndAnswer" for="answer<?= $index ?>" ><?= $sentencesOfAnOpponent->answer_  + $index ?>
+            <input type="radio" name="answer" id="answer<?= $index ?>" value="answer<?= $index ?>" class="section__div--quotesAndAnswers" />
         </label>
-        <label class="section__form__label--quoteAndAnswer" for="answer2"><?= $sentencesOfAnOpponent->answer_2 ?>
-            <input type="radio" name="answer" id="answer2" value="answer2" class="section__div--quotesAndAnswers" />
-        </label>
-        <label class="section__form__label--quoteAndAnswer" for="answer3"><?= $sentencesOfAnOpponent->answer_3 ?>
-            <input type="radio" name="answer" id="answer3" value="answer3" class="section__div--quotesAndAnswers" />
-        </label>
-        <label class="section__form__label--quoteAndAnswer" for="answer4"><?= $sentencesOfAnOpponent->answer_4 ?>
-            <input type="radio" name="answer" id="answer4" value="answer4" class="section__div--quotesAndAnswers" />
-        </label>
+        <?php endforeach ?>
+        <input type="hidden" value="<? $ranking ?>" name="position" />
+        <input type="hidden" value="<? $lap ?>" name="lap" />
         <input class="section__form__label--submit" type="submit" value="Valider">
     </form>
 </section>
